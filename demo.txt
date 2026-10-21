@@ -1,0 +1,15 @@
+AKUN DEMO MONITORING MOBIL
+
+Sopir
+- Nama akun: Budi Santoso | Kata sandi: sopir123
+- Nama akun: Siti Rahma | Kata sandi: sopir123
+- Nama akun: sopir | Kata sandi: 123
+
+Penumpang
+- Email: penumpang@example.com | Kata sandi: penumpang123
+- Nama akun: user | Kata sandi: 123
+
+Admin
+- Nama akun: admin | Kata sandi: 123
+
+Catatan: Akun demo hanya tersedia saat aplikasi berjalan dalam mode development (NODE_ENV bukan production).

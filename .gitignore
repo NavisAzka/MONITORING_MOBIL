@@ -1,0 +1,11 @@
+node_modules/
+.next/
+out/
+.data/
+.env*
+!.env.example
+npm-debug.log*
+data/
+ACCOUNTS.txt
+pgdata/
+pgdata-dev/

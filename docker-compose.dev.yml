@@ -1,0 +1,21 @@
+# Local development database only: docker compose -f docker-compose.dev.yml up -d
+services:
+  db:
+    image: postgres:16-alpine
+    container_name: monitoring-mobil-db-dev
+    restart: unless-stopped
+    user: "${UID:-1000}:${GID:-1000}"
+    environment:
+      POSTGRES_USER: monitoring
+      POSTGRES_PASSWORD: monitoring_dev
+      POSTGRES_DB: monitoring
+      PGDATA: /var/lib/postgresql/data/pgdata
+    ports:
+      - "127.0.0.1:55432:5432"
+    volumes:
+      - ./pgdata-dev:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U monitoring -d monitoring"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
